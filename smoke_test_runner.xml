@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> <!-- if it is http, then it generates error-->
+<suite name="ProjectName Automation" verbose="1">
+    <test name="ProjectName Smoke Test">
+        <packages>
+            <package name=".*"></package> <!-- for all packages-->
+            <package name="com.tester.AAA"></package>
+            <package name="com.tester.AAA"></package>
+            <package name="com.tester.AAA"></package>
+        </packages>
+        <classes>
+            <class name="com.tester.AAA"></class>
+            <class name="com.tester.AAA">
+                <methods>
+                    <include name="AAA"></include>
+                    <exclude name="getAllCellInOneRow"></exclude> <!-- except for stg-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
