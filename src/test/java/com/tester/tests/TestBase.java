@@ -57,6 +57,7 @@ public class TestBase {
         report.setSystemInfo("Environment","QA");
         report.setSystemInfo("Browser", ConfigurationReader.get("browser"));
         report.setSystemInfo("OS",System.getProperty("os.name"));
+        extentLogger = report.createTest("Test Name","Description");
 
     }
 
